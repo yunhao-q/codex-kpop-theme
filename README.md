@@ -34,32 +34,25 @@ It intentionally excludes Windows, SwiftBar, API relays, bundled celebrity image
 
 ## Install the Skill
 
-### From this local repository
-
-```bash
-mkdir -p ~/.codex/skills/create-kpop-codex-theme
-rsync -a --delete --exclude '.git/' \
-  /Users/yq/src/codex-kpop-theme/ \
-  ~/.codex/skills/create-kpop-codex-theme/
-```
-
-Start a new Codex task after installing so the Skill is discovered.
-
-### From GitHub after the repository is published
-
 ```bash
 git clone https://github.com/yunhao-q/codex-kpop-theme.git \
   ~/.codex/skills/create-kpop-codex-theme
 ```
 
-For an existing clone, run `git pull`, then start a new task.
+Restart Codex after installation so the Skill is discovered.
+
+To update later:
+
+```bash
+git -C ~/.codex/skills/create-kpop-codex-theme pull
+```
 
 ## Use it
 
 Invoke the Skill in a new task:
 
 ```text
-$create-kpop-codex-theme 把这张照片做成完整的 Mac Codex 主题。
+$create-kpop-codex-theme Turn this photo into a complete Mac Codex theme. Use English only.
 ```
 
 Then attach one image. If the artist is visually uncertain, answer only the artist/group-name question. The Skill handles the remaining design decisions.
@@ -83,7 +76,7 @@ Theme packs are stored under:
 With Codex running on the theme debug port:
 
 ```bash
-/Users/yq/src/codex-kpop-theme/scripts/restore-theme-macos.sh
+~/.codex/skills/create-kpop-codex-theme/scripts/restore-theme-macos.sh
 ```
 
 This removes injected DOM/CSS and stops only the recorded injector. It does not delete saved theme packs.

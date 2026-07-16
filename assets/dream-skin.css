@@ -62,7 +62,7 @@ html.codex-dream-skin aside.app-shell-left-panel button:hover {
   transform: translateX(1px);
 }
 
-html.codex-dream-skin aside.app-shell-left-panel button[aria-label^="切换模式"] {
+html.codex-dream-skin aside.app-shell-left-panel button[aria-label*="mode" i] {
   background: transparent !important;
   border-color: transparent !important;
   font-family: "Segoe UI", system-ui, sans-serif !important;
@@ -72,7 +72,7 @@ html.codex-dream-skin aside.app-shell-left-panel button[aria-label^="切换模�
   text-shadow: 0 0 14px rgba(124, 255, 70, .34);
 }
 
-html.codex-dream-skin aside.app-shell-left-panel button[aria-label^="切换模式"]::after {
+html.codex-dream-skin aside.app-shell-left-panel button[aria-label*="mode" i]::after {
   content: none !important;
 }
 
@@ -314,7 +314,7 @@ html.codex-dream-skin .dream-skin-home {
 }
 
 .dream-skin-home [data-feature="game-source"]::after {
-  content: var(--dream-skin-tagline, "把喜欢的画面变成可交互的 Codex 工作台。");
+  content: var(--dream-skin-tagline, "Turn inspiration into code.");
   display: block;
   margin-top: 13px;
   color: rgba(233, 255, 241, .82);
@@ -337,7 +337,7 @@ html.codex-dream-skin .dream-skin-home {
 }
 
 .dream-skin-home [data-feature="game-source"] button::before {
-  content: var(--dream-skin-project-prefix, "选择项目 · ");
+  content: var(--dream-skin-project-prefix, "Choose project · ");
   font-size: .46em;
   font-weight: 700;
   vertical-align: middle;
@@ -419,7 +419,7 @@ html.codex-dream-skin .composer-surface-chrome::before {
 }
 
 .dream-skin-home div:has(> .horizontal-scroll-fade-mask .group\/project-selector)::before {
-  content: var(--dream-skin-project-label, "◉  选择项目");
+  content: var(--dream-skin-project-label, "Choose project");
   position: absolute;
   left: 13px;
   top: 6px;
@@ -541,12 +541,12 @@ html.codex-dream-skin[data-dream-shell="light"] aside.app-shell-left-panel butto
   color: #1f1a1b !important;
 }
 
-html.codex-dream-skin[data-dream-shell="light"] aside.app-shell-left-panel button[aria-label^="切换模式"] {
+html.codex-dream-skin[data-dream-shell="light"] aside.app-shell-left-panel button[aria-label*="mode" i] {
   color: #1f1a1b !important;
   text-shadow: none !important;
 }
 
-html.codex-dream-skin[data-dream-shell="light"] aside.app-shell-left-panel button[aria-label^="切换模式"]::after {
+html.codex-dream-skin[data-dream-shell="light"] aside.app-shell-left-panel button[aria-label*="mode" i]::after {
   content: none !important;
 }
 

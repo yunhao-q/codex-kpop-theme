@@ -75,9 +75,9 @@
     const checked = document.querySelector('input[name="appearance-theme"]:checked');
     if (checked) {
       const label = (checked.getAttribute("aria-label") || checked.value || "").toLowerCase();
-      if (label.includes("暗") || label.includes("dark")) return "dark";
-      if (label.includes("浅") || label.includes("light")) return "light";
-      if (label.includes("系统") || label.includes("system")) {
+      if (label.includes("dark")) return "dark";
+      if (label.includes("light")) return "light";
+      if (label.includes("system")) {
         return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
       }
     }
@@ -156,8 +156,8 @@
     }
     root.style.setProperty("--dream-skin-name", cssString(THEME.name || "Codex Dream Skin"));
     root.style.setProperty("--dream-skin-tagline", cssString(THEME.tagline || "Make something wonderful."));
-    root.style.setProperty("--dream-skin-project-prefix", cssString(THEME.projectPrefix || "选择项目 · "));
-    root.style.setProperty("--dream-skin-project-label", cssString(THEME.projectLabel || "◉  选择项目"));
+    root.style.setProperty("--dream-skin-project-prefix", cssString(THEME.projectPrefix || "Choose project · "));
+    root.style.setProperty("--dream-skin-project-label", cssString(THEME.projectLabel || "Choose project"));
     const layout = THEME.layout || {};
     root.style.setProperty("--dream-hero-x", `${Number(layout.heroFocusX ?? 62)}%`);
     root.style.setProperty("--dream-hero-y", `${Number(layout.heroFocusY ?? 36)}%`);

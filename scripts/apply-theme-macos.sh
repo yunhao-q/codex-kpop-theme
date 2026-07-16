@@ -43,7 +43,7 @@ if verified_cdp_endpoint "$PORT"; then DEBUG_READY="true"; fi
 
 if codex_is_running && [ "$DEBUG_READY" = "false" ]; then
   if [ "$PROMPT_RESTART" = "true" ] && [ "$RESTART_EXISTING" = "false" ]; then
-    /usr/bin/osascript -e 'display dialog "Codex 需要重启一次才能启用 Dream Skin。" buttons {"取消", "重启并应用"} default button "重启并应用" with title "K-pop Codex Theme"' >/dev/null \
+    /usr/bin/osascript -e 'display dialog "Codex must restart once to apply this theme." buttons {"Cancel", "Restart and Apply"} default button "Restart and Apply" with title "K-pop Codex Theme"' >/dev/null \
       || fail "Theme launch was cancelled."
     RESTART_EXISTING="true"
   fi
