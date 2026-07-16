@@ -25,6 +25,8 @@ These screenshots demonstrate themes generated from user-supplied images. The re
 
 It intentionally excludes Windows, SwiftBar, API relays, bundled celebrity images, and gallery mockups.
 
+At the time of comparison, this repository contains roughly one-third as many physical source lines as the full [Fei-Away/Codex-Dream-Skin](https://github.com/Fei-Away/Codex-Dream-Skin) repository (about 2,400 versus 6,800). It is intentionally optimized for one focused use case: creating and running K-pop themes in Codex on macOS.
+
 ## Requirements
 
 - macOS.
@@ -70,6 +72,8 @@ Theme packs are stored under:
 ```text
 ~/Library/Application Support/CodexKpopTheme/themes/<theme-id>
 ```
+
+After installation, open Codex using the generated theme shortcut whenever you want the theme active. The shortcut starts the official app and applies the selected theme; your normal Codex data and settings remain unchanged.
 
 ## Restore the normal appearance
 
