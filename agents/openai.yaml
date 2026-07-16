@@ -1,0 +1,4 @@
+interface:
+  display_name: "K-pop Codex Theme"
+  short_description: "Create complete Mac Codex themes from one K-pop photo"
+  default_prompt: "Use $create-kpop-codex-theme to turn my K-pop photo into a complete macOS Codex theme."
